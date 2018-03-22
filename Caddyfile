@@ -1,0 +1,17 @@
+https://yourdomain.com{
+ root /var/www/index
+ gzip
+ index index.html
+ tls xxx@gmail.com
+ proxy /ws localhost:内部端口 {
+  websocket
+  }
+}
+https://www.yourdomain.com {
+ root /var/www/index
+ gzip
+ index index.html
+ tls xxx@gmail.com
+ proxy /ws localhost:内部端口 {
+  websocket
+  }
