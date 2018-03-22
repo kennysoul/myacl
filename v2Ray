@@ -1,0 +1,32 @@
+系统升级及设置时区：
+dpkg-reconfigure tzdata && apt update && apt -y dist-upgrade && apt -y autoremove && reboot
+
+安装v2Ray（/etc/v2ray/config.json：配置文件位置）：
+bash <(curl -L -s https://install.direct/go.sh)
+
+替换config.json,UID自动生成:https://www.uuidgenerator.net/
+
+启动v2Ray：
+service v2ray start
+
+安装Caddy及设置自启动:
+curl https://getcaddy.com | bash -s personal
+wget -N --no-check-certificate https://raw.githubusercontent.com/wuming2018/wuming/master/caddy.service
+mv caddy.service /etc/systemd/system/ && mkdir -p /etc/caddy
+chmod 644 /etc/systemd/system/caddy.service && systemctl daemon-reload && systemctl start caddy.service
+
+替换/etc/caddy/Caddyfile
+
+重启Caddy:
+service caddy restart
+
+客户端设置：
+对应域名
+端口433
+对应UID
+额外-64
+加密方式-aes-128-gcm
+传输协议ws
+伪装类型-none
+伪装域名-/ws
+底层安全-tls
