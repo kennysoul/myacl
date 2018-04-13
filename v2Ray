@@ -1,3 +1,12 @@
+Apr 13 2018 更新一键安装Vmess + HTTP2 over TLS命令（准备一个域名，并将A记录添加好）：
+
+
+
+bash <(curl -L -s https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/install_h2.sh) | tee v2ray_ins_h2.log
+
+
+#####################手动安装旧版本
+
 系统升级及设置时区：
 dpkg-reconfigure tzdata && apt update && apt -y dist-upgrade && apt -y autoremove && reboot
 
@@ -30,3 +39,5 @@ service caddy restart
 伪装类型-none
 伪装域名-/ws
 底层安全-tls
+
+
