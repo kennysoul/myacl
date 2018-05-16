@@ -185,6 +185,9 @@
 (^|\.)mshow\.fang\.com$
 (^|\.)tongji\.home\.soufun\.com$
 
+# Golfstar
+(^|\.)qpyou\.cn$
+
 # Google
 (^|\.)2mdn\.net$
 (^|\.)admob\.com$
